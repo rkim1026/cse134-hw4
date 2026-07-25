@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>09 · Grid holy grail</title>
-  <link rel="stylesheet" href="vars.css">
-  <link rel="stylesheet" href="global.css">
+  <title>The CSE Cheese Society</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/home.css">
   <!--
     GRID HOLY GRAIL
     The full holy grail in ONE grid container — no wrappers, no nesting.
@@ -88,30 +88,41 @@
 </head>
 <body>
   <header>
-    <h1>09 · Grid holy grail</h1>
+    <h1>The CSE Cheese Society</h1>
   </header>
 
   <nav>
-    <p>Nav — <code>grid-area: nav</code>.</p>
     <ul>
-      <li><a href="#">Link one</a></li>
-      <li><a href="#">Link two</a></li>
-      <li><a href="#">Link three</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="guide/index.html">Guide</a></li>
+      <li><a href="join.html">Join</a></li>
     </ul>
   </nav>
 
+  <!-- The Invoker Button -->
+  <button commandfor="cheese-fact-popover" command="toggle-popover">
+    🧀 Click for a Cheese Fact
+  </button>
+
+  <!-- The Popover Element -->
+  <div popover id="cheese-fact-popover">
+    <h3>Did you know?</h3>
+    <p>Gouda accounts for more than 50% of the world's cheese consumption!</p>
+  </div>
+
   <main>
-    <h2>Main</h2>
-    <p>Header, nav, main, aside, and footer are all direct children of the body — one grid places everything, where flexbox (demo 07) needed two nested containers.</p>
-    <p>Narrow the window below 40rem: the media query rewrites <code>grid-template-areas</code> and the page restacks as a single column. No region's HTML or other CSS changes.</p>
+    <h2>Welcome to the CSE Cheese society</h2>
+    <p></p>
+
   </main>
 
   <aside>
-    <p>Aside — <code>grid-area: aside</code>, fixed at 12rem on wide screens.</p>
+    <p>Cheese of the Month</p>
   </aside>
 
   <footer>
-    <p>Footer — spans all three columns via <code>"footer footer footer"</code>.</p>
+    <p>Copyright 2026 The CSE Cheese Society. Cheese responsibly.</p>
   </footer>
 </body>
 </html>
