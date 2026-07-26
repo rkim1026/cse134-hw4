@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 · Normal flow</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/site.css">
+  <!--
+    NORMAL FLOW
+    With no layout CSS at all, block boxes (h1, p, section…) stack top to
+    bottom and fill the available width, while inline boxes (strong, em, a…)
+    run left to right inside lines of text.
+    The only real layout rules here build the classic centered reading
+    column: max-width plus margin-inline: auto on the article.
+  -->
+  <style>
+    body {
+      padding: var(--space-3);
+    }
+
+    section {
+      p {
+        padding: var(--space-2);
+        border: var(--border);
+        background: var(--panel);
+      }
+
+      strong,
+      em {
+        background: var(--paper);
+        outline: var(--border-width) var(--border-style) var(--accent);
+      }
+    }
+
+    article {
+      max-width: var(--measure);
+      margin-inline: auto;
+      padding: var(--space-2) var(--space-3);
+      border-inline-start: var(--rule);
+      background: var(--panel);
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>01 · Normal flow</h1>
+  <p>Nothing on this page floats, flexes, or sits on a grid — this is plain document flow.</p>
+
+
+  <section>
+    <h2>Block boxes stack</h2>
+    <p>This paragraph is a block box. It fills the page width and stacks below the heading above it.</p>
+    <p>This second paragraph stacks below the first. Inside it, <strong>this strong text</strong> and <em>this em text</em> are inline boxes — outlined in red, each only as wide as its own content, flowing along the line.</p>
+  </section>
+
+
+
+    <article class="cheese guide">
+        <h2>What Is Cheese, Really?</h2>
+        <p>Cheese begins when milk separates into curds and whey. The curds are 
+                pressed, salted, and aged. Every variable matters: the animal, the
+                season, the cave, the patience of the maker. Change one and you get a
+                different cheese. This is why a single recipe has produced thousands
+                of distinct varieties.</p>
+        <p>The word <q>cheese</q> comes from the Latin <i class="latin" lang="la">caseus</i>, which also gives us the
+                word "casein," the main milk protein.</p>
+
+        <style>
+            /* This overrides header p in cheese.css because it comes after cheese.css runs which is in later run order */
+            header p {
+                color: #365314;
+            }
+        </style>
+
+        <section class="cheese-families">
+            <h2>Famous Families of Cheese</h2>
+            <dl>
+                <dt>Fresh Cheeses</dt>
+                <dd>Fresh cheeses are young and mild. They include mozzarella, ricotta, and chevre. Eat these within days.</dd>
+
+                <dt>Soft-Ripened Cheeses</dt>
+                <dd>Soft-ripened cheeses grow a white bloomy rind. Brie and Camembert are the classic examples. The rind is edible and you should eat it.</dd>
+
+                <dt>Blue Cheeses</dt>
+                <dd>Blue cheeses are veined with <i class="latin" lang="la">Penicillium roqueforti</i>. Roquefort,
+                    Gorgonzola, and Stilton lead this family. They are salty, sharp, and
+                    divisive.</dd>
+
+                <dt>Hard Cheeses</dt>
+                <dd>Hard cheeses are aged for months or years. Parmigiano-Reggiano,
+                    aged Gouda, and Comte reward the wait with crystals of crunch and
+                    deep, nutty flavor.</dd>
+
+
+            </dl>
+
+
+
+        </section>
+
+
+        <section class="caution">   
+            <h2>A Word of Caution</h2>
+            <p id="warning">Warning: The American product known as "processed cheese food" is,
+            at best, distantly related to cheese. Read the label.</p>
+
+            <blockquote>
+                <p>Cheese is milk's leap toward
+                immortality.</p>
+                <footer>- Clifton Fadiman</footer>
+            </blockquote>
+            
+        </section>
+
+        <section class="try-it">
+            <h2>Try It Yourself</h2>
+            <form>
+                <fieldset>
+                    <legend>Which of these have you tasted?</legend>
+                    <ul>
+                        <input type="checkbox" id="brie" name="cheese" value="brie">
+                        <label for="brie">Brie</label>
+
+                        <br>
+
+                        <input type="checkbox" id="roquefort" name="cheese" value="roquefort">
+                        <label for="roquefort">Roquefort</label>
+
+                        <br>
+
+                        <input type="checkbox" id="aged-gouda" name="cheese" value="aged-gouda">
+                        <label for="aged-gouda">Aged Gouda</label>
+
+                        <br>
+                    </ul>
+                    <input type="text" id="cheese-tasted" name="cheese" value=""></input>
+
+                    <button class="cheese-tasted" type="button">Submit</button>
+                </fieldset>
+
+            </form>
+
+        </section>
+
+    </article>
+
+
+</body>
+</html>
