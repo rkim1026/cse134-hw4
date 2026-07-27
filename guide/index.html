@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../styles/tokens.css">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../styles/site.css">
+  <link rel="stylesheet" href="../styles/guide.css">
+
   <!--
     NORMAL FLOW
     With no layout CSS at all, block boxes (h1, p, section…) stack top to
@@ -45,7 +47,25 @@
   </style>
 
 </head>
+
+
 <body>
+
+  <header>
+      <h1>The CSE Cheese Society</h1>
+      <img src="../images/logo.svg" alt="" width="45" height="45">
+      
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="index.html">Guide</a></li>
+      <li><a href="../join.html">Join</a></li>
+    </ul>
+  </nav>
+
   <h1>What Is Cheese, Really?</h1>
 
   <section>
@@ -59,13 +79,6 @@
   </section>
 
     <article class="cheese guide">
-
-        <style>
-            /* This overrides header p in cheese.css because it comes after cheese.css runs which is in later run order */
-            header p {
-                color: #365314;
-            }
-        </style>
 
         <section class="cheese-families">
             <h2>Famous Families of Cheese</h2>

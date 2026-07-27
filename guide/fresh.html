@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>08 · Grid page scaffold</title>
+  <title>Fresh Cheese</title>
   <link rel="stylesheet" href="../styles/tokens.css">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../styles/site.css">
+  <link rel="stylesheet" href="../styles/families.css">
+
   <!--
     GRID PAGE SCAFFOLD
     The same header/main/footer page as demo 06, built with grid instead.
@@ -14,49 +16,54 @@
     the page; each region claims its slot with grid-area. Rows are
     auto 1fr auto: natural height at the edges, main takes the rest.
   -->
-  <style>
-    body {
-      display: grid;
-      grid-template-areas:
-        "header"
-        "main"
-        "footer";
-      grid-template-rows: auto 1fr auto;
-      min-height: 100svh;
-
-      > header {
-        grid-area: header;
-        padding: var(--space-2) var(--space-3);
-        border-block-end: var(--border);
-        background: var(--panel);
-      }
-
-      > main {
-        grid-area: main;
-        padding: var(--space-3);
-      }
-
-      > footer {
-        grid-area: footer;
-        padding: var(--space-2) var(--space-3);
-        border-block-start: var(--border);
-        background: var(--panel);
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
-    <h1>08 · Grid page scaffold</h1>
+    <h1>Fresh Cheese</h1>
   </header>
 
+    <nav class="nav">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="index.html">Guide</a></li>
+      <li><a href="../join.html">Join</a></li>
+    </ol>
+    <br>
+    <ul>
+      <li><a href="hard.html">Previous Cheese</a></li>
+      <li><a href="soft.html">Next Cheese</a></li>
+    </ul>
+
+    </nav>
+
   <main>
-    <p>Main — this region is placed with <code>grid-area: main</code> into the <code>1fr</code> row, so it takes all the height the header and footer leave over.</p>
-    <p>Compare the CSS with demo 06: no growing children, just three named rows.</p>
+    <img class="cheese-pic vt-blue" src="../images/cheese-fresh.svg" alt="…" width="160" height="120">
+
+    <p>Young, moist, and mild. Fresh cheeses skip aging entirely: the curds
+are drained, maybe lightly salted, and sent straight to the table.
+They taste of milk itself, which is the whole point.
+
+Character: soft, spreadable or springy, high in moisture. Flavors are
+delicate — milky, lemony, faintly sweet. There is nowhere for a flaw
+to hide, so freshness is everything.
+
+Notable members: mozzarella, ricotta, chevre, queso fresco, and
+mascarpone.
+
+How to enjoy: eat within days. Tear mozzarella over tomatoes, spoon
+ricotta onto toast with honey, crumble chevre into a salad. Fresh
+cheese belongs to summer.
+
+Did you know? Real mozzarella di bufala is made from the milk of
+water buffalo, whose herds were brought to Italy over a thousand
+years ago.</p>
+
   </main>
 
   <footer>
-    <p>Footer — sits in the last named row, pinned to the bottom by the 1fr row above it.</p>
+    <p>Copyright 2026 The CSE Cheese Society. Cheese responsibly.</p>
+
   </footer>
 </body>
 </html>

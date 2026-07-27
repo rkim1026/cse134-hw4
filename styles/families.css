@@ -29,7 +29,7 @@ body {
     }
 }
 
-ul, ol {
+img, ul, ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -42,3 +42,7 @@ nav li {
   margin-inline-end: 1rem; 
 }
 
+.cheese-pic {
+  display: block;
+  margin-inline: auto;
+}

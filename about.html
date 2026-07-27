@@ -6,6 +6,7 @@
   <title>About</title>
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/about.css">
   <!--
     FLOAT
     float: left shifts the figure to one side and takes it out of normal
@@ -14,42 +15,25 @@
     clear: both is visible: without it, the footer would slide up and sit
     beside the float; with it, the footer starts below the figure's bottom.
   -->
-  <style>
-    body {
-      --figure-width: 11rem;
-      --figure-height: 24rem;
 
-      max-width: var(--measure);
-      margin-inline: auto;
-      padding: var(--space-3);
-
-      article {
-        figure {
-          float: left;
-          width: var(--figure-width);
-          min-height: var(--figure-height);
-          margin: 0 var(--space-2) var(--space-1) 0;
-          padding: var(--space-2);
-          border: var(--border);
-          background: var(--panel);
-        }
-      }
-
-      details {
-        clear: right;
-      }
-
-      > footer {
-        clear: both;
-        padding: var(--space-2);
-        border-block-start: var(--rule);
-        background: var(--panel);
-      }
-    }
-
-  </style>
 </head>
 <body>
+  
+  <header>
+      <h1>The CSE Cheese Society</h1>
+      <img src="images/logo.svg" alt="" width="45" height="45">
+      
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="guide/index.html">Guide</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
   <h1>About The CSE Cheese Society</h1>
   <p>The CSE Cheese Society was founded in 2024, when a seminar ended
 early and a cheese plate did not. What began as an argument over the

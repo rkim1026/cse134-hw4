@@ -18,10 +18,27 @@ body {
     }
     }
 
+    details {
+    clear: right;
+    }
+
     > footer {
     clear: both;
     padding: var(--space-2);
     border-block-start: var(--rule);
     background: var(--panel);
     }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-inline-end: 1rem; 
 }

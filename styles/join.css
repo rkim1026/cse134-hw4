@@ -1,5 +1,4 @@
 
-
 /*. template 5 */
 .card {
     --card-width: 28rem;
@@ -41,4 +40,18 @@ body {
     border-block-start: var(--border);
     background: var(--panel);
     }
+}
+
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-inline-end: 1rem; 
 }

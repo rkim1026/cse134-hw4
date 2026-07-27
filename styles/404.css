@@ -2,16 +2,35 @@ body {
     --card-width: 28rem;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100svh;
     padding: var(--space-3);
 
-    main {
+}
+
+main {
     max-width: var(--card-width);
     padding: var(--space-3);
     border: var(--border);
     border-block-start: var(--rule);
     background: var(--panel);
-    }
 }
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-inline-end: 1rem; 
+}
+
+

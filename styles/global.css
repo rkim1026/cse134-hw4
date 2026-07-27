@@ -56,4 +56,8 @@
     font-family: ui-monospace, "SF Mono", Menlo, monospace;
     font-size: 0.9em;
   }
+  header {
+    display: flex;
+  }
 }
+
