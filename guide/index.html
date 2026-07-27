@@ -46,27 +46,19 @@
 
 </head>
 <body>
-  <h1>01 · Normal flow</h1>
-  <p>Nothing on this page floats, flexes, or sits on a grid — this is plain document flow.</p>
-
+  <h1>What Is Cheese, Really?</h1>
 
   <section>
-    <h2>Block boxes stack</h2>
-    <p>This paragraph is a block box. It fills the page width and stacks below the heading above it.</p>
-    <p>This second paragraph stacks below the first. Inside it, <strong>this strong text</strong> and <em>this em text</em> are inline boxes — outlined in red, each only as wide as its own content, flowing along the line.</p>
-  </section>
-
-
-
-    <article class="cheese guide">
-        <h2>What Is Cheese, Really?</h2>
-        <p>Cheese begins when milk separates into curds and whey. The curds are 
+    <p>Cheese begins when milk separates into curds and whey. The curds are 
                 pressed, salted, and aged. Every variable matters: the animal, the
                 season, the cave, the patience of the maker. Change one and you get a
                 different cheese. This is why a single recipe has produced thousands
                 of distinct varieties.</p>
-        <p>The word <q>cheese</q> comes from the Latin <i class="latin" lang="la">caseus</i>, which also gives us the
+    <p>The word <q>cheese</q> comes from the Latin <i class="latin" lang="la">caseus</i>, which also gives us the
                 word "casein," the main milk protein.</p>
+  </section>
+
+    <article class="cheese guide">
 
         <style>
             /* This overrides header p in cheese.css because it comes after cheese.css runs which is in later run order */
@@ -78,26 +70,36 @@
         <section class="cheese-families">
             <h2>Famous Families of Cheese</h2>
             <dl>
+                <a href="fresh.html">
                 <dt>Fresh Cheeses</dt>
+                </a>
                 <dd>Fresh cheeses are young and mild. They include mozzarella, ricotta, and chevre. Eat these within days.</dd>
+                <img src="../images/cheese-fresh.svg" alt="A ball of fresh mozzarella on a small board" width="160" height="120">
 
+                <a href="soft.html">
                 <dt>Soft-Ripened Cheeses</dt>
+                </a>
                 <dd>Soft-ripened cheeses grow a white bloomy rind. Brie and Camembert are the classic examples. The rind is edible and you should eat it.</dd>
+                <img src="../images/cheese-soft.svg" alt="A wedge of soft-ripened brie with a bloomy white rind" width="160" height="120">
 
+                <a href="blue.html">
                 <dt>Blue Cheeses</dt>
+                </a>
                 <dd>Blue cheeses are veined with <i class="latin" lang="la">Penicillium roqueforti</i>. Roquefort,
                     Gorgonzola, and Stilton lead this family. They are salty, sharp, and
                     divisive.</dd>
+                <img src="../images/cheese-blue.svg" alt="A crumbly wedge of blue cheese with dark veins" width="160" height="120">
 
-                <dt>Hard Cheeses</dt>
+                  
+                <a href="hard.html">
+                  <dt>Hard Cheeses</dt>
+                </a>
                 <dd>Hard cheeses are aged for months or years. Parmigiano-Reggiano,
                     aged Gouda, and Comte reward the wait with crystals of crunch and
                     deep, nutty flavor.</dd>
-
+                <img src="../images/cheese-hard.svg" alt="A dense wedge of aged hard cheese with crunchy crystals" width="160" height="120">
 
             </dl>
-
-
 
         </section>
 
