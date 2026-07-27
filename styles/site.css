@@ -1,6 +1,47 @@
-@media (prefers-reduced-motion: no-preference) {
-  @view-transition { navigation: auto; }
+/* Shared chrome: header, nav, footer — collected from the page CSS files.
+   Page files still own layout maps (grid/flex/float) and whether the nav
+   is a horizontal row or a sidebar stack. */
+
+@layer chrome {
+  /* From home.css / families.css / join.css header rules */
+  body > header {
+    display: flex;
+    padding: var(--space-2) var(--space-3);
+    border-block-end: var(--border);
+    background: var(--panel);
+  }
+
+  /* From home.css nav chrome — padding/background only */
+  body > nav {
+    padding: var(--space-2);
+    background: var(--panel);
+  }
+
+  /* Shared list reset only — do NOT force flex/inline-block here.
+     Home’s nav is a narrow sidebar; horizontal flex was clipping “Home”.
+     Horizontal row styling stays in each page’s CSS (join/about/404/etc.). */
+  body > nav ul,
+  body > nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* From home.css / families.css / join.css footer rules */
+  body > footer {
+    padding: var(--space-2) var(--space-3);
+    border-block-start: var(--border);
+    background: var(--panel);
+  }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
 
-
+  .vt-fresh { view-transition-name: cheese-fresh; }
+  .vt-soft  { view-transition-name: cheese-soft; }
+  .vt-blue  { view-transition-name: cheese-blue; }
+  .vt-hard  { view-transition-name: cheese-hard; }
+}

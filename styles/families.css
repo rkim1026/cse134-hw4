@@ -37,7 +37,7 @@ img, ul, ol {
   justify-content: center;
 }
 
-nav li {
+nav li, main li {
   display: inline-block;
   margin-inline-end: 1rem; 
 }
@@ -46,3 +46,8 @@ nav li {
   display: block;
   margin-inline: auto;
 }
+
+h2 {
+    text-align: center;
+}
+

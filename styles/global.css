@@ -2,7 +2,7 @@
    <style>. Both layers below lose to any unlayered rule, so demo styles
    always override these without specificity fights. */
 
-@layer reset, base;
+@layer reset, base, chrome, layout;
 
 @layer reset {
   * {
