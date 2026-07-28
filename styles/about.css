@@ -1,44 +1,46 @@
-body {
-    --figure-width: 11rem;
-    --figure-height: 24rem;
+@layer layout {
+    body {
+        --figure-width: 11rem;
+        --figure-height: 24rem;
 
-    max-width: var(--measure);
-    margin-inline: auto;
-    padding: var(--space-3);
+        max-width: var(--measure);
+        margin-inline: auto;
+        padding: var(--space-3);
 
-    article {
-    figure {
-        float: left;
-        width: var(--figure-width);
-        min-height: var(--figure-height);
-        margin: 0 var(--space-2) var(--space-1) 0;
+        article {
+        figure {
+            float: left;
+            width: var(--figure-width);
+            min-height: var(--figure-height);
+            margin: 0 var(--space-2) var(--space-1) 0;
+            padding: var(--space-2);
+            border: var(--border);
+            background: var(--panel);
+        }
+        }
+
+        details {
+        clear: right;
+        }
+
+        > footer {
+        clear: both;
         padding: var(--space-2);
-        border: var(--border);
+        border-block-start: var(--rule);
         background: var(--panel);
-    }
-    }
-
-    details {
-    clear: right;
+        }
     }
 
-    > footer {
-    clear: both;
-    padding: var(--space-2);
-    border-block-start: var(--rule);
-    background: var(--panel);
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
     }
-}
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  display: inline-block;
-  margin-inline-end: 1rem; 
+    nav li {
+    display: inline-block;
+    margin-inline-end: 1rem; 
+    }
 }
