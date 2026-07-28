@@ -1,8 +1,7 @@
-repeated pasting the css path links
-i had to use .. for getting out of a current folder and then routing it to proper file
-pasting the template code
-repeated using the same structure 
+What I repeated by hand was almost the whole site chrome. Every page needed the same header with the society name and logo, the same four nav links, and the same footer. I also pasted the same stylesheet links over and over — tokens, global, site, then the page file — and had to keep them in the right order. The family pages were the worst: four nearly identical HTML files that only really differed in the hero image, the copy, the view-transition class, and the previous/next links. Once I decided to change the header or the footer wording, I had to walk through every file and hope I did not miss one. Similar pages shared the same code structure, so I moved some shared features into global and site CSS, but the HTML skeleton still had to be copied by hand.
 
-header, nav, main, footer
+Relative paths are what broke when I moved things. Pages in guide/ are one folder deeper than index.html, so links that worked at the root failed until I added ../ for styles, images, and pages like about and join. The confusing part was that some hrefs looked the same but meant different things: index.html is the home page from the root, but inside guide/ it is the guide listing. Nothing crashed loudly; you just landed in the wrong place. The 404 page had the opposite problem. Because the host can serve it for a bad URL at any depth, relative paths would resolve against the fake path the visitor typed, so that page needed root-absolute paths starting with /.
 
-i wish a tool to generate the overall structure so that i can paste my things into its proper places. 
+I also spent time copying layout demo code into real pages and then splitting rules across multiple CSS files: tokens for values, global for type and color in layers, site for shared chrome and view transitions, and one layout file per page. Cascading the header, nav, main, and footer through that system helped keep the site consistent, but it made the repetition more obvious.
+
+What I want a tool to generate is the overall structure once. Give me a layout template with slots where I can paste page content, compute the correct number of ../ from each output path, build the nav from a single list of links, and generate the four family pages from one data file so previous/next and view-transition names stay in sync.
